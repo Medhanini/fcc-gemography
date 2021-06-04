@@ -1,14 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <TheHeadline :headline="headline" />
-      </div>
-    </v-app-bar>
+    <TheHeader />
 
     <v-main>
       <router-view/>
@@ -17,16 +9,11 @@
 </template>
 
 <script>
-import TheHeadline from './components/TheHeadline'
+import TheHeader from './components/TheHeader'
 export default {
   name: 'App',
   components:{
-    TheHeadline
-  },
-  computed:{
-    headline(){
-      return"Front-end Coding Challenge"
-    }
+    TheHeader
   },
   data: () => ({
   }),
