@@ -2,7 +2,7 @@ import axios from 'axios'
 
 //to handle state
 const state = {
-  AboutList: [],
+  ReposList: [],
 }
 
 //to handle state
@@ -11,11 +11,12 @@ const getters = {
 
 //to handle actions
 const actions = {
-  getAboutList({commit}, payload) {
+  getReposList({commit}) {
     return new Promise( (resolve, reject) => {
-      axios.get('http://localhost:3000/about')
+      axios.get('https://api.github.com/search/repositories?q=created:%3E2017-10-22&sort=stars&order=desc&page=2')
       .then((response) => {
-        commit('setAboutList', response.data)
+        console.log(response.data)
+        commit('setReposList', response.data)
         resolve(response)
       }).catch(error => {
         reject(error)
@@ -24,8 +25,8 @@ const actions = {
   }
 }
 const mutations = {
-  setAboutList(state, payload) {
-    state.AboutList = payload
+  setReposList(state, payload) {
+    state.ReposList = payload
   }
 }
 export default {

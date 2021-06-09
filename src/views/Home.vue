@@ -1,15 +1,22 @@
 <template>
-  <hello-world />
+<div>
+  <TrendingRepos />
+  {{ data }}
+</div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
-
+  import TrendingRepos from '../components/TrendingRepos'
+import { mapState } from 'vuex'
   export default {
     name: 'Home',
-
     components: {
-      HelloWorld,
+      TrendingRepos,
     },
+    computed:{
+          ...mapState({
+            data: state => state.repos.ReposList,
+        }),
+    }
   }
 </script>
