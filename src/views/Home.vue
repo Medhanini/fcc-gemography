@@ -1,8 +1,11 @@
 <template>
-<div>
-  <TrendingRepos />
-  {{ data }}
-</div>
+<v-container fluid>
+  <TrendingRepos 
+    v-for="(value , index) in data.items"
+    :key="index" 
+    :data="value" 
+  />
+</v-container>
 </template>
 
 <script>
