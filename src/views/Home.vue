@@ -1,5 +1,5 @@
 <template>
-<v-container fluid>
+<v-container >
   <TrendingRepos 
     v-for="(value , index) in data.items"
     :key="index" 

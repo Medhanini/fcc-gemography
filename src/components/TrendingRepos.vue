@@ -4,16 +4,23 @@
       <TheAvatar :data="data.owner" />
     </v-col>
     <v-col>
-
+      <div>
+        <TheName :name="data.name" />
+        <TheDescription :description="data.description" />
+      </div>
     </v-col>
   </v-row>
 </template>
 <script>
 import TheAvatar from './TheAvatar.vue'
+import TheName from './TheName.vue'
+import TheDescription from './TheDescription'
 export default {
   name:'TrendingRepos',
   components:{
-    TheAvatar
+    TheAvatar,
+    TheName,
+    TheDescription
   },
   props:{
     data:{
