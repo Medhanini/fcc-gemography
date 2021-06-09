@@ -18,7 +18,7 @@ export default {
     },
     computed:{
     headline(){
-      return"Front-end Coding Challenge"
+      return"Front-end Coding Challenge 'Trending Repos' "
     }
   },
 }
