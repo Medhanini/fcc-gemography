@@ -11,8 +11,8 @@ export default new Vuex.Store({
   mutations: {
   },
   actions: {
-    INIT ({dispatch}) {
-      dispatch('getReposList')
+    INIT () {
+      //dispatch('getReposList')
       console.log('Initalizing')
     }
   },

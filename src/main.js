@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
+import ScrollLoader from 'vue-scroll-loader'
+ 
+Vue.use(ScrollLoader)
 
 Vue.config.productionTip = false
 

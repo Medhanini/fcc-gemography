@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="3" >
+    <v-col cols="2" >
       <TheAvatar :data="data.owner" />
     </v-col>
     <v-col>
