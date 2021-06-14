@@ -6,7 +6,7 @@
     <v-col>
       <div>
         <TheName :name="data.name" />
-        <TheDescription :description="data.description" />
+        <TheDescription class="pt-12" :description="data.description" />
       </div>
     </v-col>
   </v-row>
@@ -23,10 +23,10 @@ export default {
     TheDescription
   },
   props:{
-    data:{
-      type:Object,
-      require:true
-    }
+      data:{
+        type:Object,
+        require:true
+      }
     }
 }
 </script>
