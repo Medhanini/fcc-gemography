@@ -1,7 +1,7 @@
 <template>
   <v-container >
     <v-skeleton-loader
-      v-if="!data.items"
+      v-show="!data.items"
       v-bind="attrs"
       type="article, actions"
     ></v-skeleton-loader>
@@ -10,7 +10,7 @@
       :key="index" 
       :data="value" 
     />
-    <scroll-loader :loader-method="getDataList" :loader-disable="disable">
+    <scroll-loader class="mt-12" :loader-method="getDataList" :loader-disable="disable">
     </scroll-loader>
   </v-container>
 </template>

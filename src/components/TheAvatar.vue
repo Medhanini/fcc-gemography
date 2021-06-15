@@ -4,7 +4,7 @@
         :src="data.avatar_url"
         :lazy-src="data.avatar_url"
         aspect-ratio="1"
-        class="grey lighten-2"
+        class="grey lighten-3"
       >
         <template v-slot:placeholder>
           <v-row
