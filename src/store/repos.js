@@ -3,6 +3,7 @@ import axios from 'axios'
 //to handle state
 const state = {
   ReposList: [],
+  page : 0
 }
 
 //to handle state
@@ -29,6 +30,12 @@ const actions = {
 const mutations = {
   setReposList(state, payload) {
     state.ReposList = payload
+  },
+  SetNextPage(state) {
+    state.page++
+  },
+  SetPrevPage(state) {
+    state.page--
   }
 }
 export default {

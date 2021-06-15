@@ -31,7 +31,6 @@
           boilerplate: false,
         },
         disable: false,
-        page: 1,
         pageSize: 30,
         images: [],
         d:''
@@ -39,25 +38,15 @@
     },
     methods:{
       getImageList() {
-        let p = this.page++
-        this.$store.dispatch('getReposList',{ page: p }).then(
-          
-
-           // Stop scroll loading...
-            // this.disable = this.data.items.length < this.pageSize
-        )
-
-          setTimeout(()=> this.$vuetify.goTo(0) , 1000)
-          alert('page'+p)
-
+        this.$store.commit('SetNextPage')
+        this.$store.dispatch('getReposList',{ page: this.page })
+        setTimeout(()=> this.$vuetify.goTo(0) , 1000)
       },
-    },
-    created() {
-            
     },
     computed:{
         ...mapState({
           data: state => state.repos.ReposList,
+          page: state => state.repos.page
       })
     }
   }
