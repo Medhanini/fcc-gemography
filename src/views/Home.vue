@@ -10,7 +10,7 @@
       :key="index" 
       :data="value" 
     />
-    <scroll-loader :loader-method="getImageList" :loader-disable="disable">
+    <scroll-loader :loader-method="getDataList" :loader-disable="disable">
     </scroll-loader>
   </v-container>
 </template>
@@ -29,14 +29,11 @@
           class: 'mb-6',
           boilerplate: false,
         },
-        disable: false,
-        pageSize: 30,
-        images: [],
-        d:''
+        disable: false
       }
     },
     methods:{
-      getImageList() {
+      getDataList() {
         this.$store.commit('SetNextPage')
         this.$store.dispatch('getReposList',{ page: this.page })
         setTimeout(()=> this.$vuetify.goTo(0) , 1000)
