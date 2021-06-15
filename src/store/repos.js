@@ -18,7 +18,7 @@ const actions = {
         params
       })
       .then((response) => {
-        console.log(response.data)
+        //console.log(response.data)
         commit('setReposList', response.data)
         resolve(response)
       }).catch(error => {

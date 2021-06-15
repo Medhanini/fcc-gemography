@@ -13,7 +13,7 @@ export default new Vuex.Store({
   actions: {
     INIT () {
       //dispatch('getReposList')
-      console.log('Initalizing')
+      //console.log('Initalizing')
     }
   },
   plugins: [vuexActionInit()],

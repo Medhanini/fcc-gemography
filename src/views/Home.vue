@@ -11,8 +11,7 @@
       :data="value" 
     />
     <scroll-loader :loader-method="getImageList" :loader-disable="disable">
-   <div>Loading...</div>
-</scroll-loader>
+    </scroll-loader>
   </v-container>
 </template>
 
