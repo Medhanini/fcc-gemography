@@ -1,12 +1,14 @@
 <template>
   <v-row>
-    <v-col cols="2" >
+    <v-col class="col-12 col-md-2" >
       <TheAvatar :data="data.owner" />
     </v-col>
     <v-col class="details">
       <div>
         <TheName :name="data.name" />
-        <TheDescription class="pt-5" :description="data.description" />
+        <template v-if="data.description" >
+          <TheDescription class="pt-5" :description="data.description | truncate(150)" />
+        </template>
         <div class="d-flex btm-d" >
           <TheStarsNumber :stars="data.stargazers_count" class="mt-1" />
           <TheIssuesNumber :issues="data.open_issues_count" class="mt-1 ml-2" />
