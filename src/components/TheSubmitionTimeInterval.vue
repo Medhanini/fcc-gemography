@@ -31,7 +31,7 @@ export default {
             if( Difference_In_Days > 0 ){
                 return 'Submited '+Difference_In_Days+' days ago '
             }else{
-                return 'Submited few hours days ago '
+                return 'Submited few hours ago '
             }
             
         }
