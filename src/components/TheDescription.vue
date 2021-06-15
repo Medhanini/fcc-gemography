@@ -6,7 +6,7 @@ export default {
     name:'TheDescription',
     props:{
         description:{
-            type:Text
+            type:String
         }
     }
 }
